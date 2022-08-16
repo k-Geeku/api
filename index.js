@@ -6,7 +6,7 @@ const port = process.env.port || 3000;
 const dataapi = require("./red.json");
 
 app.get("/",(req,res)=>{
-    res.send("hello")
+    res.send(dataapi);
 
 })
 
