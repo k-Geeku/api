@@ -1,15 +1,14 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
-app.use(cors());
-const port = process.env.port || 3000;
-const dataapi = require("./red.json");
+const express = require("express")
+const data = require("./data.json")
+const app = express()
+const port = process.env.PORT || 3000
 
-app.get("/",(req,res)=>{
-    res.send(dataapi);
 
+app.get('/',(req,res) => {
+    res.send(data);
 })
 
 app.listen(port,()=>{
-    console.log("hi");
+    console.log('App is listening = ',port);
+    
 })
